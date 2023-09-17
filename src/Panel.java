@@ -95,7 +95,13 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         g.setFont(new Font("Digital-7", Font.PLAIN, 18));
         if (gameOver){
             g.setColor(Color.red);
-            g.drawString("Game Over: " + String.valueOf(snakeLength.size()), gridTile- 16, gridTile);
+            g.drawString("Score: " + String.valueOf(snakeLength.size()), gridTile- 16, gridTile);
+
+            g.setFont(new Font("Digital-7", Font.PLAIN, 56));
+            g.drawString("GAME OVER", 200, 250);
+
+            g.setFont(new Font("Digital-7", Font.PLAIN, 14));
+            g.drawString("Press 'SPACE' to restart", 245, 265);
 
         }
         else{
