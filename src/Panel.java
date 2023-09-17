@@ -98,10 +98,10 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
             g.drawString("Score: " + String.valueOf(snakeLength.size()), gridTile- 16, gridTile);
 
             g.setFont(new Font("Digital-7", Font.PLAIN, 56));
-            g.drawString("GAME OVER", 200, 250);
+            g.drawString("GAME OVER", 180, 250);
 
             g.setFont(new Font("Digital-7", Font.PLAIN, 14));
-            g.drawString("Press 'SPACE' to restart", 245, 265);
+            g.drawString("Press 'SPACE' to restart", 230, 265);
 
         }
         else{
@@ -175,6 +175,16 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
     // key pressed only. the rest leave blank
     @Override
     public void keyPressed(KeyEvent e) {
+         if(e.getKeyCode()== KeyEvent.VK_SPACE){
+            LaunchPage launchPage = new LaunchPage();
+            Component topLevelContainer = this.getTopLevelAncestor();
+
+            if (topLevelContainer instanceof JFrame) {
+                JFrame frame = (JFrame) topLevelContainer;
+                frame.dispose();
+            }
+
+        }
         if(e.getKeyCode()== KeyEvent.VK_UP && yVelocity !=1){
             xVelocity =0;
             yVelocity = -1;
