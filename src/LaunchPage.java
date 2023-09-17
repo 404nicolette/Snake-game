@@ -19,7 +19,7 @@ public class LaunchPage extends JFrame implements ActionListener {
         button.setFont(new Font("Digital-7", Font.PLAIN,14));
         button.setFocusable(false);
         button.addActionListener(this);
-        button.setBounds(250, 300, 100,50);
+        button.setBounds(250, 280, 100,40);
 
         panel.setBackground(new Color(17, 18, 17));
         panel.setLayout(null);
